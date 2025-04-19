@@ -8,7 +8,7 @@
 #define HASH_TABLE_INCREASING_RATE 70
 #define MAX_KEY_SIZE 12
 
-/* Since MAX_KEY_SIZE is 16, we will support jugs up to two-digit numbers. Why? 
+/* Since MAX_KEY_SIZE is 12, we will support jugs up to two-digit numbers. Why? 
 Because there are at most 3 jugs. 2*3=6. 2 commas came. 8. 
 And a null came. 9. So 12 is a sufficient number. - Riza */
 
