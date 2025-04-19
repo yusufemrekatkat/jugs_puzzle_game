@@ -1,33 +1,32 @@
 #ifndef DATA_TYPES_H
 #define DATA_TYPES_H
+#include <stdio.h>
 
-// ==================== WRITE YOUR OPTIONAL DATA TYPES IF YOU NEED =============
+const int NUM_JUGS=2; /*The number of jugs 
+(In the future, we will make this value 3, because the teacher asked us for a 2 and 3 jugs solution.)*/
+const int JUG_CAPACITIES[NUM_JUGS]={5,3}; //Jug capacities
+const int TARGET_AMOUNT = 2; //Target
 
-enum CITIES 
+enum ACTIONS 
 {
-	Arad,    Bucharest, Craiova,  Drobeta, Eforie,
-	Fagaras, Giurgiu,   Hirsova,  Iasi,    Lugoj,
-	Mehadia, Neamt,     Oradea,   Pitesti, Rimnicu_Vilcea,
-	Sibiu,   Timisoara, Urziceni, Vaslui,  Zerind
+    FILL_JUG_0,	
+    FILL_JUG_1,
+    //FILL_JUG_2,   //For now, there is no need as we currently have two jugs.
+    EMPTY_JUG_0,
+    EMPTY_JUG_1,
+    //EMPTY_JUG_2,
+    POUR_0_TO_1,   
+    POUR_1_TO_0
+    //POUR_0_TO_2, 
+	//POUR_1_TO_2, 
+	//POUR_2_TO_0, 
+	//POUR_2_TO_1
 };
 
-
-// ====== WRITE YOUR COMPULSORY (BUT SPECIFIC TO THE PROBLEM) DATA TYPES =======
-
-enum ACTIONS // All possible actions
+typedef struct State
 {
-	Go_Arad,    Go_Bucharest, Go_Craiova,  Go_Drobeta, Go_Eforie,
-	Go_Fagaras, Go_Giurgiu,   Go_Hirsova,  Go_Iasi,    Go_Lugoj,
-	Go_Mehadia, Go_Neamt,     Go_Oradea,   Go_Pitesti, Go_Rimnicu_Vilcea,
-	Go_Sibiu,   Go_Timisoara, Go_Urziceni, Go_Vaslui,  Go_Zerind
-};
-
-typedef struct State  
-{
-    enum CITIES city;
-    float h_n;   // Heuristic function
-      
-}State;
+    int jug_levels[NUM_JUGS]; //Water level in each jug
+} State;
 
 // ================== YOU DO NOT NEED TO CHANGE THIS PART ======================
 
