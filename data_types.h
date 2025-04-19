@@ -28,6 +28,11 @@ typedef struct State
     int jug_levels[NUM_JUGS]; //Water level in each jug
 } State;
 
+/*For example,
+If there is 4 liters of water in the 5-liter container and 1 liter of water in the 3-liter container, 
+the jug_levels array for the current State will look like {4, 1}. 
+That is, the value of jug_levels[0] is 4 and the value of jug_levels[1] is 1.*/
+
 // ================== YOU DO NOT NEED TO CHANGE THIS PART ======================
 
 enum METHODS

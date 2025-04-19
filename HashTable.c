@@ -14,26 +14,37 @@
 //___________________ Create unique char key for each state______________________
 void Generate_HashTable_Key(const State *const state, unsigned char* key) 
 {
-	int temp_city = state->city, i=0;
-	
-	if(temp_city == 0){
-		key[0] = '0';
-		key[1] = '\0';
-	}
-	else{
-		for(i=0; temp_city>0; i++){
-			key[i] = temp_city%10 + '0';
-			temp_city /= 10;
-		}
-		key[i] = '\0';
-	}
-		
-	if(i>MAX_KEY_SIZE){
-		printf("ERROR: MAX_KEY_SIZE is exceeded in Generate_HashTable_Key. \n");
-		exit(-1);
-	}   
-}
+	int i;
+    int current_pos = 0;
 
+    for (i = 0; i < NUM_JUGS; i++) {
+        /* sprintf converts number to string..
+           (char*)key + current_pos: memory address where writing begins*/
+        int chars_written = sprintf((char*)key + current_pos, "%d", state->jug_levels[i]);
+        current_pos += chars_written;
+        if (i < NUM_JUGS - 1) {
+            if (current_pos < MAX_KEY_SIZE - 1) { //-1: because extra space is needed for the null char
+                key[current_pos] = ',';
+                current_pos++;
+            } else {
+                printf("ERROR: MAX_KEY_SIZE is exceeded in Generate_HashTable_Key. \n");
+                exit(-1);
+        }
+    }
+    if (current_pos < MAX_KEY_SIZE) {
+        key[current_pos] = '\0';
+    } else {
+        printf("ERROR: MAX_KEY_SIZE is exceeded in Generate_HashTable_Key. \n");
+        exit(-1);
+    }
+}
+/* To explain it simply, 
+   if the level of our jugs is 5 and 2 respectively (i.e. state ->jug_levels[5,2] )
+   this function will generate the key "5,2"
+   We put a comma in between and finish it with \0 at the end.
+   It's pretty easy :) 
+   -Riza
+*/
 
 // ======= YOU DO NOT NEED TO CHANGE THIS COMPULSORY DECLARATIONS ==============
 
