@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Extra (please dont touch here) (lütfen buraya dokunmayın) -Rıza
+*.dev
+*.layout
+Makefile.win
+
