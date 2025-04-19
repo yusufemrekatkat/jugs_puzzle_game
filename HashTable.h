@@ -6,7 +6,11 @@
 // ========  YOUR COMPULSORY (BUT SPECIFIC TO THE PROBLEM) COMMANDS ============
 #define HASH_TABLE_BASED_SIZE 25
 #define HASH_TABLE_INCREASING_RATE 70
-#define MAX_KEY_SIZE 3
+#define MAX_KEY_SIZE 12
+
+/* Since MAX_KEY_SIZE is 16, we will support jugs up to two-digit numbers. Why? 
+Because there are at most 3 jugs. 2*3=6. 2 commas came. 8. 
+And a null came. 9. So 12 is a sufficient number. - Riza */
 
 // ================== YOU DO NOT NEED TO CHANGE THIS PART ======================
 typedef struct {
@@ -18,7 +22,7 @@ typedef struct {
 
 // =========  YOUR COMPULSORY (BUT SPECIFIC TO THE PROBLEM) DECLARATIONS =======
 void Generate_HashTable_Key(const State *const state, unsigned char* key);
-
+//It is prototype, please don't touch -Riza
 
 // ======= YOU DO NOT NEED TO CHANGE THIS COMPULSORY DECLARATIONS ==============
 Hash_Table* New_Hash_Table(const int size);
