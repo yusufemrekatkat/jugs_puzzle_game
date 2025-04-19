@@ -10,7 +10,7 @@
 
 /* Since MAX_KEY_SIZE is 12, we will support jugs up to two-digit numbers. Why? 
 Because there are at most 3 jugs. 2*3=6. 2 commas came. 8. 
-And a null came. 9. So 12 is a sufficient number. - Riza */
+And a null char came. 9. So 12 is a sufficient number. - Riza */
 
 // ================== YOU DO NOT NEED TO CHANGE THIS PART ======================
 typedef struct {
