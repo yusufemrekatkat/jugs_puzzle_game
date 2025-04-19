@@ -29,7 +29,7 @@ typedef struct State
 } State;
 
 /*For example,
-If there is 4 liters of water in the 5-liter container and 1 liter of water in the 3-liter container, 
+If there is 4 liters of water in the 5-liter jug and 1 liter of water in the 3-liter jug, 
 the jug_levels array for the current State will look like {4, 1}. 
 That is, the value of jug_levels[0] is 4 and the value of jug_levels[1] is 1.*/
 
