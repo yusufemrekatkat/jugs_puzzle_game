@@ -8,12 +8,12 @@ C source code given in the attachment include various heuristic and blind search
 | File Name             | Update                                                                                                                               |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `GRAPH_SEARCH.c`      | -                                                                                                                                    |
-| `HashTable.c`         | 1. `Generate_HashTable_Key()`                                                                                                        |
+| `HashTable.c`         | ~~1. `Generate_HashTable_Key()`~~                                                                                                       |
 | `Standart_Search.c`   | 1. `First_InsertFrontier_Search_TREE()` <br> 2. `Insert_Priority_Queue_GENERALIZED_A_Star()`                                            |
 | `SpecificToProblem.c` | All functions (New functions can be added if necessary.)                                                                          |
-| `data_types.h`        | 1. `enum ACTIONS` <br> 2. `typedef struct State` <br> *(New variables and data types can be added if necessary.)*                       |
+| `data_types.h`        | ~~1. `enum ACTIONS` <br> 2. `typedef struct State` <br> *(New variables and data types can be added if necessary.)*~~                       |
 | `GRAPH_SEARCH.h`      | 1. `PREDETERMINED_GOAL_STATE` <br> 2. `ACTIONS_NUMBER` <br> 3. `MAX_SEARCHED_NODE` <br> *(New variables and data types can be added if necessary.)* |
-| `HashTable.h`         | 1. `HASH_TABLE_BASED_SIZE` <br> 2. `HASH_TABLE_INCREASING_RATE` <br> 3. `MAX_KEY_SIZE`                                                |
+| `HashTable.h`         | ~~1. `HASH_TABLE_BASED_SIZE` <br> 2. `HASH_TABLE_INCREASING_RATE` <br> 3. `MAX_KEY_SIZE`~~                                                |
 
 ## The following information should be included in the project report:
 
