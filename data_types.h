@@ -9,18 +9,20 @@ const int TARGET_AMOUNT = 2; //Target
 
 enum ACTIONS 
 {
-    FILL_JUG_0,	
-    FILL_JUG_1,
-    //FILL_JUG_2,   //For now, there is no need as we currently have two jugs.
-    EMPTY_JUG_0,
-    EMPTY_JUG_1,
-    //EMPTY_JUG_2,
-    POUR_0_TO_1,   
-    POUR_1_TO_0
-    //POUR_0_TO_2, 
-	//POUR_1_TO_2, 
-	//POUR_2_TO_0, 
-	//POUR_2_TO_1
+    FILL_JUG_0,	//0
+    FILL_JUG_1, //1
+    FILL_JUG_2, //2
+    EMPTY_JUG_0, //3
+    EMPTY_JUG_1,//4
+    EMPTY_JUG_2,//5
+    POUR_0_TO_1,//6
+    POUR_1_TO_0, //7
+    POUR_0_TO_2, //8
+	POUR_1_TO_2, //9
+	POUR_2_TO_0, //10
+	POUR_2_TO_1,  //11
+	
+	ACTIONS_COUNT //12
 };
 
 typedef struct State
