@@ -18,7 +18,7 @@ State* Create_State()
     if(state==NULL)
     	Warning_Memory_Allocation(); 
    
-    for (i=0; i<NUM_JUGS; i++) {
+    for (int i=0; i<NUM_JUGS; i++) {
         state->jug_levels[i] = 0;
     }
     
